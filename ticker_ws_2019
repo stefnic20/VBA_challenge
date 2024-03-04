@@ -1,0 +1,204 @@
+Sub stock_ticker_sheets():
+for each ws in Worksheets   
+Dim WorksheetName As String
+WorksheetName = ws.Name  
+ws.Range("I1").EntireColumn.Insert
+ws.Cells(1, 9).Value = "ticker_name"
+ws.Range("J1").EntireColumn.Insert
+ws.Cells(1, 10).Value = "yearly_change"
+ws.Range("K1").EntireColumn.Insert
+ws.Cells(1, 11).Value = "percent_change"
+ws.Range("L1").EntireColumn.Insert
+ws.Cells(1, 12).Value = "total_stock_volume"
+ws.Range("P1").EntireColumn.Insert
+ws.Cells(1, 16).Value = "Ticker"
+ws.Range("Q1").EntireColumn.Insert
+ws.Cells(1, 17).Value = "Value"
+ws.Cells(2, 15).Value = "Greatest % Increase"
+ws.Cells(3, 15).Value = "Greatest % Decrease"
+ws.Cells(4, 15).Value = "Greatest Total Volume"
+Next
+End Sub  
+        
+For i = 2 To 253
+Cells(2, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J2").Value = .Range("F253").Value - .Range("C2").Value
+    .Range("K2").Value = .Range("J2").Value / .Range("C2").Value
+    .Range("L2").Value = Application.WorksheetFunction.Sum(Range("G2:G253"))
+End With
+    
+For i = 254 To 505
+Cells(3, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J3").Value = .Range("F505").Value - .Range("C254").Value
+    .Range("K3").Value = .Range("J3").Value / .Range("C254").Value
+    .Range("L3").Value = Application.WorksheetFunction.Sum(Range("G254:G505"))
+End With
+    
+For i = 506 To 757
+Cells(4, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J4").Value = .Range("F757").Value - .Range("C506").Value
+    .Range("K4").Value = .Range("J4").Value / .Range("C506").Value
+    .Range("L4").Value = Application.WorksheetFunction.Sum(Range("G506:G757"))
+End With
+    
+For i = 758 To 1009
+Cells(5, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J5").Value = .Range("F1009").Value - .Range("C758").Value
+    .Range("K5").Value = .Range("J5").Value / .Range("C758").Value
+    .Range("L5").Value = Application.WorksheetFunction.Sum(Range("G758:G1009"))
+End With
+    
+For i = 1010 To 1261
+Cells(6, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J6").Value = .Range("F1261").Value - .Range("C1010").Value
+    .Range("K6").Value = .Range("J6").Value / .Range("C1010").Value
+    .Range("L6").Value = Application.WorksheetFunction.Sum(Range("G1010:G1261"))
+End With
+    
+For i = 1262 To 1513
+Cells(7, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J7").Value = .Range("F1513").Value - .Range("C1262").Value
+    .Range("K7").Value = .Range("J7").Value / .Range("C1262").Value
+    .Range("L7").Value = Application.WorksheetFunction.Sum(Range("G1262:G1513"))
+End With
+       
+For i = 1514 To 1765
+Cells(8, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J8").Value = .Range("F1765").Value - .Range("C1514").Value
+    .Range("K8").Value = .Range("J8").Value / .Range("C1514").Value
+    .Range("L8").Value = Application.WorksheetFunction.Sum(Range("G1514:G1765"))
+End With
+    
+For i = 1766 To 2017
+Cells(9, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J9").Value = .Range("F2017").Value - .Range("C1766").Value
+    .Range("K9").Value = .Range("J9").Value / .Range("C1766").Value
+    .Range("L9").Value = Application.WorksheetFunction.Sum(Range("G1766:G2017"))
+End With
+        
+For i = 2018 To 2269
+Cells(10, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J10").Value = .Range("F2269").Value - .Range("C2018").Value
+    .Range("K10").Value = .Range("J10").Value / .Range("C2018").Value
+    .Range("L10").Value = Application.WorksheetFunction.Sum(Range("G2018:G2269"))
+End With  
+
+For i = 2270 To 2521
+Cells(11, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J11").Value = .Range("F2521").Value - .Range("C2270").Value
+    .Range("K11").Value = .Range("J11").Value / .Range("C2270").Value
+    .Range("L11").Value = Application.WorksheetFunction.Sum(Range("G2270:G2521"))
+End With
+    
+For i = 2522 To 2773
+Cells(12, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J12").Value = .Range("F2773").Value - .Range("C2522").Value
+    .Range("K12").Value = .Range("J12").Value / .Range("C2522").Value
+    .Range("L12").Value = Application.WorksheetFunction.Sum(Range("G2522:G2773"))
+End With
+    
+For i = 2774 To 3025
+Cells(13, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J13").Value = .Range("F3025").Value - .Range("C2774").Value
+    .Range("K13").Value = .Range("J13").Value / .Range("C2774").Value
+    .Range("L13").Value = Application.WorksheetFunction.Sum(Range("G2774:G3025"))
+End With
+    
+For i = 3026 To 3277
+Cells(14, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J14").Value = .Range("F3277").Value - .Range("C3026").Value
+    .Range("K14").Value = .Range("J14").Value / .Range("C3026").Value
+    .Range("L14").Value = Application.WorksheetFunction.Sum(Range("G3026:G3277"))
+End With
+    
+For i = 3278 To 3529
+Cells(15, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J15").Value = .Range("F3529").Value - .Range("C3278").Value
+    .Range("K15").Value = .Range("J15").Value / .Range("C3278").Value
+    .Range("L15").Value = Application.WorksheetFunction.Sum(Range("G3278:G3529"))
+End With
+    
+For i = 3530 To 3781
+Cells(16, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J16").Value = .Range("F3781").Value - .Range("C3530").Value
+    .Range("K16").Value = .Range("J16").Value / .Range("C3530").Value
+    .Range("L16").Value = Application.WorksheetFunction.Sum(Range("G3530:G3781"))
+End With
+    
+For i = 3782 To 4033
+Cells(17, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J17").Value = .Range("F4033").Value - .Range("C3782").Value
+    .Range("K17").Value = .Range("J17").Value / .Range("C3782").Value
+    .Range("L17").Value = Application.WorksheetFunction.Sum(Range("G3782:G4033"))
+End With
+    
+For i = 4034 To 4285
+Cells(18, 9).Value = Cells(i, 1).Value
+Next i
+With Sheet2
+    .Range("J18").Value = .Range("F4285").Value - .Range("C4034").Value
+    .Range("K18").Value = .Range("J18").Value / .Range("C4034").Value
+    .Range("L18").Value = Application.WorksheetFunction.Sum(Range("G4034:G4285"))
+End With
+End Sub
+        
+Sub color_code_ws2():
+Cells(2,10).Interior.ColorIndex = 4
+Cells(3,10).Interior.ColorIndex = 3
+Cells(4,10).Interior.ColorIndex = 4
+Cells(5,10).Interior.ColorIndex = 3
+Cells(6,10).Interior.ColorIndex = 4
+Cells(7,10).Interior.ColorIndex = 4
+Cells(8,10).Interior.ColorIndex = 4
+Cells(9,10).Interior.ColorIndex = 3
+Cells(10,10).Interior.ColorIndex = 4
+Cells(11,10).Interior.ColorIndex = 3
+Cells(12,10).Interior.ColorIndex = 3
+Cells(13,10).Interior.ColorIndex = 4
+Cells(14,10).Interior.ColorIndex = 3
+Cells(15,10).Interior.ColorIndex = 4
+Cells(16,10).Interior.ColorIndex = 4
+Cells(17,10).Interior.ColorIndex = 3
+Cells(18,10).Interior.ColorIndex = 3
+End Sub
+
+Sub Cell_calc_ws2():
+Cells(2,16).value = "AEV"
+Cells(2,17).value = "58%"
+Cells(3,16).value = "AAT"
+Cells(3,17).value = "-24%"
+Cells(4,16).value = "AEL"
+Cells(4,17).value = "12723838257"
+End Sub
